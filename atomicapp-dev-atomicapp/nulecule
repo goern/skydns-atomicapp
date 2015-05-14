@@ -1,0 +1,34 @@
+---
+specversion: 0.0.1-alpha
+id: atomicapp-dev-atomicapp
+metadata:
+  name: atomicapp dev
+  appversion: 0.0.1
+  description: This is a nulecule that will get you the container components \
+  you need to dev on nulecule apps
+graph:
+  skydns:
+    params:
+      dns_domain:
+        description: >
+          Internal DNS domain name.
+          This domain must not be used in your network. Services will be discoverable
+          under <service-name>.<namespace>.<domainname>, e.g.
+          myservice.default.kube.local
+        default: kube.local
+      dns_server:
+        description: >
+          IP address of the DNS server.
+          Kubernetes will create a pod with several containers, serving as the DNS
+          server and expose it under this IP address. The IP address must be from
+          the range specified as kube_service_addresses above.
+          And this is the IP address you should use as address of the DNS server
+          in your containers.
+        default: 10.254.0.10
+      image:
+        description: which drupal image to use
+        default: skynetservices/skydns
+    artifacts:
+      kubernetes:
+        - file://graph/k8s/skydns-rc.yaml
+        - file://graph/k8s/skydns-svc.yaml
