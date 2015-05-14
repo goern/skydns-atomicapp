@@ -4,8 +4,9 @@ id: atomicapp-dev-atomicapp
 metadata:
   name: atomicapp dev
   appversion: 0.0.1
-  description: This is a nulecule that will get you the container components \
-  you need to dev on nulecule apps
+  description: >
+    This is a nulecule that will get you the container components you need
+    to dev on nulecule apps
 graph:
   skydns:
     params:
