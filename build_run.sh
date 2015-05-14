@@ -19,7 +19,7 @@ BASE_DIR=`pwd`
 #build atomicapp-dev-atomicapp  docker container
 echo "building atomicapp-dev-atomicapp"
 cd atomicapp-dev-atomicapp/
-docker build -t $USERNAME/atomicapp-dev-atomicapp  --file="docker-artifacts/Dockerfile" .
+docker build -t $USERNAME/atomicapp-dev-atomicapp  --file="Dockerfile" .
 docker tag -f $USERNAME/atomicapp-dev-atomicapp  $DOCKER_REGISTRY/atomicapp-dev-atomicapp$TAG
 echo "pushing to $DOCKER_REGISTRY/atomicapp-dev-atomicapp$TAG"
 echo "y" | docker push $DOCKER_REGISTRY/atomicapp-dev-atomicapp$TAG
