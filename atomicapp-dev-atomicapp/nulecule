@@ -26,7 +26,7 @@ graph:
           in your containers.
         default: 10.254.0.10
       image:
-        description: which drupal image to use
+        description: hmmm.. does this make sense? take a look in the k8s-rc file
         default: skynetservices/skydns
     artifacts:
       kubernetes:
