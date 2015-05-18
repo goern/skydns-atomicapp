@@ -1,0 +1,6 @@
+job-id: goern-skydns-atomicapp-1 
+nulecule-file: nulecule
+notify: #nulecule
+test: True
+docker-index: True
+local-delivery: True
