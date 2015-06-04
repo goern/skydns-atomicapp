@@ -37,7 +37,7 @@ desiredState:
                     "-domain=$dns_domain",
             ]
           - name: skydns
-            image: kubernetes/skydns:2015-03-11-001
+            image: goern/skydns-centos7
             command: [
                     # entrypoint = "/skydns",
                     "-machines=http://localhost:4001",
