@@ -1,6 +1,7 @@
-job-id: goern-skydns-atomicapp-1 
+job-id: goern-skydns-atomicapp-1
 nulecule-file: nulecule
 notify: #nulecule
+notify-email: goern@redhat.com
 test: True
 docker-index: True
 local-delivery: True
